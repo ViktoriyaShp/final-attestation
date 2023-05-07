@@ -1,0 +1,56 @@
+body {
+    width: 100vw;
+    height:calc(100vh–173px);
+    background-color: #161516;
+}
+
+.basket {
+    display: flex;
+    padding: 51px;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.basket_header {
+    display: flex;
+    justify-content: center;
+    gap: 63px;
+}
+
+.basket_title{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+
+.basket_btn {
+    background-color: #161516;
+    border-radius:50%;
+    border: 1px solid #D58C51; 
+    width:32px;
+    height:32px;
+    cursor: pointer;
+}
+
+.basket_header-btn {
+    width: 200px;
+    height: 42px;
+    background: #161516;
+    border-color: #D58C51;
+    cursor: pointer;
+}
+
+.basket_header-txt {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #D58C51;
+}

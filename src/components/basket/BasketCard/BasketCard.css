@@ -1,0 +1,58 @@
+.card-basket {
+    display: flex;
+    padding: 27px 520px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-basket_image {
+    display: inline;
+    width: 122px;
+    height: 122px;
+}
+
+.card-basket_title{
+    display: inline;
+    padding: 0 190px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    width: 286px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.card-basket_price {
+    display: inline;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D58C51;
+}
+
+.add-to-cartbasket-button {
+    display:inline-block;
+    background-color: #161516;
+    border-radius:50%;
+    border: 1px solid #D58C51; 
+    width:32px;
+    height:32px;
+    cursor: pointer;
+}
+
+.card-basket:hover > .add-to-cartbasket-button {
+    color:#D58C51;
+}
+
+.card-basket:hover >.text {
+    color:#D58C51;
+}
+
+.add-to-cartbasket-button > img {
+    justify-content: center;
+    display: flex;
+    margin: auto;
+}

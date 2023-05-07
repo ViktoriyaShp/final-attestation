@@ -1,0 +1,18 @@
+body {
+    background: #161516;
+    width: 100vw;
+    /* height: 100vh; */
+    height:calc(100vh–173px);
+    background-color: #161516;
+}
+
+.product-wrapper {
+    display: flex;
+    margin: 80px 115px;
+    column-gap: 20px;
+    justify-content: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+

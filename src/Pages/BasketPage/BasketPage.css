@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    height:calc(100vh–173px);
+    background-color: #161516;
+}
+
+.basket_btn {
+    margin: auto 0;
+    background-color: #161516;
+    border-radius:50%;
+    border: 1px solid #D58C51; 
+    width:32px;
+    height:32px;
+    cursor: pointer;
+}

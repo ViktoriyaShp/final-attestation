@@ -1,0 +1,53 @@
+hr {
+    background-image: linear-gradient(to right, transparent, rgba(242, 156, 59, 0.737), transparent);
+    border: 0;
+    height: 1px;
+    margin: 22px 0 22px 0;
+    box-sizing:content-box;
+    display: block;
+}
+
+.basket_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 515px;
+}
+
+.order_btn {
+    width: 200px;
+    height: 42px;
+    background: #D58C51;
+    cursor: pointer;
+}
+
+.order_txt {
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #131313;
+}
+
+.basket_sum {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.footer-sum {
+    display: inline;   
+    padding: 0 390px 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D58C51;
+}
