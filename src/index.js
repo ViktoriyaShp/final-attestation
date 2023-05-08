@@ -6,10 +6,11 @@ import './index.css';
 
 import reportWebVitals from './reportWebVitals';
 
-import Header from './components/products/ProductsHeader/ProductsHeader';
-import Products from './Pages/ProductsPage/ProductsPage';
-import HeaderBasket from './components/basket/BasketHeader/BasketHeader';
-import Basket from './Pages/BasketPage/BasketPage';
+// import Header from './components/products/ProductsHeader/ProductsHeader';
+// import Products from './Pages/ProductsPage/ProductsPage';
+// import HeaderBasket from './components/basket/BasketHeader/BasketHeader';
+// import Basket from './Pages/BasketPage/BasketPage';
+import Registration from './Pages/RegistrationPage/RegistrationPage';
 
 
 import { store } from './store';
@@ -24,17 +25,18 @@ const router = createBrowserRouter([
   {
     path: "/module-react",
     element: <>
-    <Header />,
-    <Products />,
+    <Registration />
+    {/* <Header />,
+    <Products />, */}
     </>
   },
-  {
-    path: "/module-react/basket",
-    element: <>
-    <HeaderBasket />,
-    <Basket />,
-    </>
-  }
+  // {
+  //   path: "/module-react/basket",
+  //   element: <>
+  //   <HeaderBasket />,
+  //   <Basket />,
+  //   </>
+  // }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

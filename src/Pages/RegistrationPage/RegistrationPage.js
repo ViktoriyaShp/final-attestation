@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import './RegistrationPage.css';
 
-const Registration =() => {
-    
+const Auth =() => {
+
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const [emailDirty, setEmailDirty] = useState(false)
@@ -12,6 +12,58 @@ const Registration =() => {
     const [passwordError, setPasswordError] = useState('Поле не должно быть пустым')
     const [formValid, setFormValid] = useState(false)
 
+    const [isAuthView, setAuthViewState] = useState(false);
+
+    const authView = <div className="login-form">
+
+        <h1 className="login-header">Вход</h1>
+    
+        <div className="input-email">
+            <input className="login-email" onChange={e => emailHandler(e) } value={email} onBlur={e => blurHandler(e)} name='email' type='email' placeholder='Логин' />
+            {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
+        </div>
+
+        <div className="input-password">
+            <input className="login-password" onChange={e => passwordHandler(e) } value={password} onBlur={e => blurHandler(e)} name='password' type='password' placeholder='Пароль' />
+            {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
+        </div>
+        <div className="button-wrapper">
+            <button disabled={!formValid} className="button-wrapper_btn">Зарегистрироваться</button>
+        </div>
+    </div>;
+
+    const regView = <div className="login-form">
+
+        <h1 className="login-header">Регистрация</h1>
+        
+        <div className="input-email">
+            <input className="login-email" onChange={e => emailHandler(e) } value={email} onBlur={e => blurHandler(e)} name='email' type='email' placeholder='Логин' />
+            {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
+        </div>
+    
+        <div className="input-password">
+            <input className="login-password" onChange={e => passwordHandler(e) } value={password} onBlur={e => blurHandler(e)} name='password' type='password' placeholder='Пароль' />
+            {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
+        </div>
+
+        <div className="checkbox">
+            <div className="flex-class-checkbox">
+                <div className="login-form__checkbox-wrapper">
+                    <input className="login-form__checkbox_input" type="checkbox" id="checkbox-input" />
+                    <div className="form__custom-checkbox" id="custom-checkbox"></div>
+                </div>
+                <label form="checkbox-input">Я согласен получать обновления на почту</label>
+            </div>
+        </div>
+        <div className="button-wrapper">
+            <button disabled={!formValid} className="button-wrapper_btn">Зарегистрироваться</button>
+        </div>
+    </div>;
+
+    const changeView = () => {
+        setAuthViewState((prevState) => !prevState);
+    };
+    
     useEffect(() => {
         if (emailError || passwordError) {
             setFormValid(false)
@@ -32,10 +84,13 @@ const Registration =() => {
 
     const passwordHandler = (e) => {
         setPassword(e.target.value)
-        if (e.target.value.langth < 4) {
-            setPasswordError('Логин должен содержать не менее 4-х символов')
-        }else {
-            setEmailError('')
+        if (e.target.value.length < 4) {
+            setPasswordError('Пароль должен содержать не менее 4-х символов')
+            if(!e.target.value) {
+                setPasswordError('Поле не должно быть пустым')
+            }
+        } else {
+            setPasswordError('')
         }
     }
 
@@ -51,35 +106,11 @@ const Registration =() => {
     }
 
     return (
-    <div class="login-form">
-        <a href="" class="link">Авторизоваться</a>
-        <h1 class="login-header">Регистрация</h1>
-        
-        <div class="login-email">
-            {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
-            <input onChange={e => emailHandler(e) } value={email} onBlur={e => blurHandler(e)} name='email' type='email' placeholder='Логин' />
-        </div>
-    
-        <div class="login-password">
-            {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
-            <input onChange={e => passwordHandler(e) } value={password} onBlur={e => blurHandler(e)} name='password' type='password' placeholder='Пароль' />
-        </div>
-
-        <div class="checkbox">
-            <div class="flex-class-checkbox">
-                <div class="login-form__checkbox-wrapper">
-                    <input class="login-form__checkbox_input" type="checkbox" id="checkbox-input" />
-                    <div class="form__custom-checkbox" id="custom-checkbox"></div>
-                </div>
-                <label for="checkbox-input">Я согласен получать обновления на почту</label>
-            </div>
-        </div>
-        <div class="button-wrapper">
-                <button disabled={!formValid} className="button-wrapper_btn">Зарегистрироваться</button>
-        </div>
-    </div>
-
+        <>
+        <button className='link' onClick={changeView}>{isAuthView ? 'Зарегистрироваться' : 'Авторизоваться'}</button>
+        {isAuthView ? authView : regView}
+        </>
     );
-}
+};
 
-export default Registration;
+export default Auth;

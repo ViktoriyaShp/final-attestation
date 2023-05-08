@@ -7,7 +7,7 @@ export const productSlice = createSlice({
     initialState: {
         list: [],
         counter: 0,
-        totalPrice: 0
+        totalPrice: 0,
 },
 
 reducers: {
