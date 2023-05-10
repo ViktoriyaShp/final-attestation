@@ -14,7 +14,10 @@ const Auth =() => {
 
     const [isAuthView, setAuthViewState] = useState(false);
 
-    const authView = <div className="login-form">
+
+    const authView = 
+
+    <div className="login-form">
 
         <h1 className="login-header">Вход</h1>
     
@@ -28,9 +31,10 @@ const Auth =() => {
             {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
         </div>
         <div className="button-wrapper">
-            <button disabled={!formValid} className="button-wrapper_btn">Зарегистрироваться</button>
+            <button disabled={!formValid}  className="button-wrapper_btn">Войти</button>
         </div>
     </div>;
+
 
     const regView = <div className="login-form">
 
@@ -56,14 +60,14 @@ const Auth =() => {
             </div>
         </div>
         <div className="button-wrapper">
-            <button disabled={!formValid} className="button-wrapper_btn">Зарегистрироваться</button>
+            <button disabled={!formValid}  className="button-wrapper_btn">Зарегистрироваться</button>
         </div>
     </div>;
 
     const changeView = () => {
         setAuthViewState((prevState) => !prevState);
     };
-    
+
     useEffect(() => {
         if (emailError || passwordError) {
             setFormValid(false)
@@ -114,3 +118,4 @@ const Auth =() => {
 };
 
 export default Auth;
+

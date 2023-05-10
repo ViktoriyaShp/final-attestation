@@ -14,6 +14,10 @@ const HeaderBasket =() => {
         return navigate('/module-react')
     };
 
+    const onButtonClickSignIn = () => {
+        return navigate('/auth')
+    };
+
     return (
         <div className='basket'>
             <div className='basket_header'>
@@ -22,7 +26,7 @@ const HeaderBasket =() => {
                 </button>
                 <h1 className='basket_title'>Корзина с выбранными товарами</h1>
             </div>
-            <button className='basket_header-btn'>
+            <button className='basket_header-btn' onClick={onButtonClickSignIn}>
                 <p className='basket_header-txt'>Выйти</p>
             </button>
         </div>

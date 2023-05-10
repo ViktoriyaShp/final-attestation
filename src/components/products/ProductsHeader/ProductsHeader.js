@@ -28,6 +28,10 @@ const Header =() => {
         return navigate('/module-react/basket')
     };
 
+    const onButtonClickSignIn = () => {
+        return navigate('/auth')
+    };
+
     return (
         <div className='header'>
             <div className='header_products'>
@@ -39,7 +43,7 @@ const Header =() => {
                             <img src={basket} alt="" />
                         </div>
                     </button>
-                    <button className='header_btn'>
+                    <button className='header_btn' onClick={onButtonClickSignIn}>
                         <p className='header_txt'>Выйти</p>
                     </button>
                 </div>
