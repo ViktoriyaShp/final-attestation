@@ -35,16 +35,14 @@ const router = createBrowserRouter([
     <Header />,
     <Products />,
     </>
-
   },
   {
     path: "/module-react/basket",
     element:
-    <>
-    <HeaderBasket />,
-    <Basket />,
-    </>
-
+      <>
+      <HeaderBasket />,
+      <Basket />,
+      </>
   }
 ]);
 

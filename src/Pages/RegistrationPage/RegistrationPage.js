@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+// import { useNavigate } from 'react-router-dom';
+
 import './RegistrationPage.css';
 
 const Auth =() => {
@@ -11,45 +13,58 @@ const Auth =() => {
     const [emailError, setEmailError] = useState('Поле не должно быть пустым')
     const [passwordError, setPasswordError] = useState('Поле не должно быть пустым')
     const [formValid, setFormValid] = useState(false)
-
     const [isAuthView, setAuthViewState] = useState(false);
 
+    // const navigate = useNavigate();
+
+    const signUp = (data) => {
+        localStorage.setItem(data.email, JSON.stringify({ 'userEmail': email, 'userPassword': password }));
+        console.log(localStorage.getItem(data.email));
+    };
+
+    const signIn = (data) => {
+        const userData = JSON.parse(localStorage.getItem(data.email));
+        if (userData) { 
+            if (userData.password === data.password) {
+                console.log(userData.name + " You Are Successfully Logged In");
+            } else {
+                console.log("Email or Password is not matching with our record");
+            }
+        } else {
+            console.log("Email or Password is not matching with our record");
+        }
+    };
 
     const authView = 
 
     <div className="login-form">
-
         <h1 className="login-header">Вход</h1>
-    
         <div className="input-email">
             <input className="login-email" onChange={e => emailHandler(e) } value={email} onBlur={e => blurHandler(e)} name='email' type='email' placeholder='Логин' />
             {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
         </div>
-
         <div className="input-password">
             <input className="login-password" onChange={e => passwordHandler(e) } value={password} onBlur={e => blurHandler(e)} name='password' type='password' placeholder='Пароль' />
             {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
         </div>
         <div className="button-wrapper">
-            <button disabled={!formValid}  className="button-wrapper_btn">Войти</button>
+            <button disabled={!formValid} onClick={signIn} className="button-wrapper_btn">Войти</button>
         </div>
     </div>;
 
 
-    const regView = <div className="login-form">
+    const regView = 
 
+    <div className="login-form">
         <h1 className="login-header">Регистрация</h1>
-        
         <div className="input-email">
             <input className="login-email" onChange={e => emailHandler(e) } value={email} onBlur={e => blurHandler(e)} name='email' type='email' placeholder='Логин' />
             {(emailDirty && emailError) && <div style={{color:'red'}}>{emailError}</div>}
         </div>
-    
         <div className="input-password">
             <input className="login-password" onChange={e => passwordHandler(e) } value={password} onBlur={e => blurHandler(e)} name='password' type='password' placeholder='Пароль' />
             {(passwordDirty && passwordError) && <div style={{color:'red'}}>{passwordError}</div>}
         </div>
-
         <div className="checkbox">
             <div className="flex-class-checkbox">
                 <div className="login-form__checkbox-wrapper">
@@ -60,7 +75,7 @@ const Auth =() => {
             </div>
         </div>
         <div className="button-wrapper">
-            <button disabled={!formValid}  className="button-wrapper_btn">Зарегистрироваться</button>
+            <button disabled={!formValid} onClick={signUp} className="button-wrapper_btn">Зарегистрироваться</button>
         </div>
     </div>;
 
@@ -100,12 +115,14 @@ const Auth =() => {
 
     const blurHandler = (e) => {
         switch (e.target.name) {
-            case 'email':
+            case email:
                 setEmailDirty(true)
                 break
-            case 'password':
+            case password:
                 setPasswordDirty(true)
                 break
+            default:
+                // do nothing
         }
     }
 

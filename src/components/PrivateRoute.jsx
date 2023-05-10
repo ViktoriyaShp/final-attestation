@@ -4,13 +4,13 @@ import { useSelector } from 'react-redux';
 
 import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({ page }) => {
+const PrivateRoute = ({ element }) => {
 
     const username = useSelector(({ products }) => products.totalPrice);
 
     if (!username) return <Navigate to={'/auth'} replace/>;
 
-    return page;
+    return element;
 
 };
 
