@@ -26,12 +26,12 @@ const Auth =() => {
         const userData = JSON.parse(localStorage.getItem(data.email));
         if (userData) { 
             if (userData.password === data.password) {
-                console.log(userData.name + " You Are Successfully Logged In");
+                console.log();
             } else {
-                console.log("Email or Password is not matching with our record");
+                console.log();
             }
         } else {
-            console.log("Email or Password is not matching with our record");
+            console.log();
         }
     };
 
