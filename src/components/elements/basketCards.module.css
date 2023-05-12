@@ -1,0 +1,39 @@
+.products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    cursor: pointer;
+}
+
+.products__img {
+    width: 132px;
+    height: 132px;
+    margin-right: 98px;
+}
+
+.products__title {
+    width: 60%;
+    text-align: left;
+    color: #D58C51;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+}
+
+.products__price {
+    margin-right: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #D58C51;
+}
+
+.products__delete {
+    width:32px;
+    height:32px;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 5px 4px 3px 5px;
+    border: 1px solid #D58C51;
+}
