@@ -48,7 +48,7 @@ function Authorization () {
     return(
         <div className={style.container}>
             <form onSubmit={handleEnterUser} className={style.registration}>
-                <Link to={'/final-attestation/registration'} className={style.auth} href="">Зарегистрироваться</Link>
+                <Link to={'/final-attestation'} className={style.auth} href="">Зарегистрироваться</Link>
                 <h1 className={style.title}>вход</h1>
                 <div className={style.inputs}>
                     <div className={style.inputsEmail}>
