@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/module-react/static/css/main.cb38bf7f.css",
+    "main.js": "/module-react/static/js/main.04043908.js",
+    "static/js/787.a878762a.chunk.js": "/module-react/static/js/787.a878762a.chunk.js",
+    "static/media/Mask Group.png": "/module-react/static/media/Mask Group.36510e5cb68b32ccf0b7.png",
+    "static/media/fone.png": "/module-react/static/media/fone.37adbc0f4405a6ce1a5c.png",
+    "static/media/1.png": "/module-react/static/media/1.8783babaabdbaf95c166.png",
+    "static/media/2701.png": "/module-react/static/media/2701.3a2992bfa05847ec3d97.png",
+    "static/media/3.png": "/module-react/static/media/3.25dae6a2421ed90b63d1.png",
+    "static/media/bag.svg": "/module-react/static/media/bag.72e035aa7c2acbb899c9f23e2b1122b4.svg",
+    "static/media/cancel.svg": "/module-react/static/media/cancel.e8d4c6596914f438dea7476d86d35c6a.svg",
+    "index.html": "/module-react/index.html",
+    "static/media/Vector.svg": "/module-react/static/media/Vector.ca3a880dfc67ab0e153f436acf794181.svg",
+    "static/media/✓.svg": "/module-react/static/media/✓.1c7b86376aa734749a05.svg",
+    "main.cb38bf7f.css.map": "/module-react/static/css/main.cb38bf7f.css.map",
+    "main.04043908.js.map": "/module-react/static/js/main.04043908.js.map",
+    "787.a878762a.chunk.js.map": "/module-react/static/js/787.a878762a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb38bf7f.css",
+    "static/js/main.04043908.js"
+  ]
+}
