@@ -59,7 +59,7 @@ function Registration () {
     return(
         <div className={style.container}>
             <form onSubmit={handleRegistrationUser} className={style.registration}>
-                <Link to={'*'} className={style.auth} href="">Авторизоваться</Link>
+                <Link to={'/final-attestation/registration/auth'} className={style.auth} href="">Авторизоваться</Link>
                 <h1 className={style.title}>Регистрация</h1>
                 
                 <div className={style.inputs}>

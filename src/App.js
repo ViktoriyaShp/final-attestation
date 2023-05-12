@@ -18,8 +18,8 @@ function App() {
         {
           authorization === false
             ? <>
-              <Route path='*' element={<Authorization/>}/>
-              <Route path='/registration' element={<Registration/>}/>
+              <Route path='/final-attestation/registration/auth' element={<Authorization/>}/>
+              <Route path='/final-attestation/registration' element={<Registration/>}/>
             </>
             : <>
               <Route path='*' element={<Products/>}/>
