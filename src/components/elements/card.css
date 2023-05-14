@@ -79,8 +79,8 @@
     text-align: end;
 }
 
-.count {
-    display: flex;
+.card__down-plus {
+        display: flex;
     align-items: center;
     margin: auto 0;
     display:inline-block;
@@ -89,39 +89,7 @@
     width:30px;
     height:30px;
     cursor: pointer;
-    background: #000;
     background-position:center;
-}
-
-/* .count .card__down-minus {
-    padding: 1px 7px;
-    border-radius: 50%;
     background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    transition-duration: 0.25s;
-} */
-
-/* .sumCount {
-    margin: 0 4px;
-    color: #fff;
 }
-
-.count .card__down-plus {
-    border-radius: 50%;
-    background-color: transparent;
-    border: 1px solid #fff;
-    color: #fff;
-    transition-duration: 0.25s;
-}
-
-.card__down .card__down-minus:hover {
-    background-color: #D58C51;
-    border: 1px solid #D58C51;
-}
-
-.card__down .card__down-plus:hover {
-    background-color: #D58C51;
-    border: 1px solid #D58C51;
-} */
 

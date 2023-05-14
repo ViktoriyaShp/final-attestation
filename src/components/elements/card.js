@@ -1,20 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.css';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import { addProduct, removeProductBasket } from '../../store/reducers/basket.js';
-import { v4 as uuidv4 } from 'uuid';
-// import Button from '../ui/button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 function Card({id, url, title, desc, price, weight, idx}) {
 
     const dispatch = useDispatch()
 
-    const basket = useSelector(state => state.basket.basket)
-    const count = basket.filter(item => item.id === id).length
+    const [isAdded, setAddState] = useState(false);
 
     let item = {
         id: id,
-        idx: uuidv4(),
         url: url,
         title: title,
         price: price,
@@ -24,12 +22,30 @@ function Card({id, url, title, desc, price, weight, idx}) {
         event.preventDefault()
         event.stopPropagation()
         dispatch(addProduct(item))
+
+        const currentCart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const product = {id, title, url, price};
+
+        currentCart.push(product);
+
+        localStorage.setItem('cart', JSON.stringify(currentCart))
+
+        setAddState(prevState => !prevState);
     }
 
     const handleRemoveProduct = (event) => {
         event.preventDefault()
         event.stopPropagation()
         dispatch(removeProductBasket(idx))
+
+        const cart = JSON.parse(localStorage.getItem('cart')) || []; 
+
+        const updCart = cart.filter(item => item.id !== id)
+
+        localStorage.setItem('cart', JSON.stringify(updCart))
+
+        setAddState(prevState => !prevState);
     }
 
 return (
@@ -47,13 +63,13 @@ return (
             <div className="card__down">
                 <div className="left">
                     <div className="card__down-price">{price} ₽</div>
-                    <div className="card__down-weight">{weight}</div>
+                    <div className="card__down-weight"> / {weight} г.</div>
                 </div>
 
-                <button className="count">
-                    <button onClick={handleRemoveProduct} className="card__down-minus">-</button>
-                    <div className="sumCount">{count}</div>
-                    <button onClick={handleAddProduct} className="card__down-plus">+</button>
+                <button 
+                    className='card__down-plus'
+                    onClick={isAdded ? handleRemoveProduct : handleAddProduct}>
+                    <FontAwesomeIcon icon={isAdded ? faXmark : faPlus} size='xl' color=' #FFFFFF'/>
                 </button>
             </div>
         </div>

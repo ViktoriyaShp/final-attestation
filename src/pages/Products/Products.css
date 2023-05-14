@@ -18,6 +18,15 @@
     font-weight: 700;
     font-size: 31px;
     line-height: 38px;
+    /* text-transform: uppercase; */
+}
+
+.header h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 31px;
+    line-height: 38px;
     text-transform: uppercase;
 }
 
@@ -33,6 +42,7 @@
 
 .bag {
     display: flex;
+    align-items: center;
     font-weight: 500;
     font-size: 17px;
     line-height: 21px;
@@ -49,4 +59,13 @@
     gap: 9px;
     /* height: calc(100vh - 172px); */
     /* overflow-x: auto; */
+}
+
+.link {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.link:active {
+    transform: translateY(2px);
 }

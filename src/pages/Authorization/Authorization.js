@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useDispatch} from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
@@ -48,7 +49,7 @@ function Authorization () {
     return(
         <div className={style.container}>
             <form onSubmit={handleEnterUser} className={style.registration}>
-                <Link to={'/final-attestation'} className={style.auth} href="">Зарегистрироваться</Link>
+                <Link to={'/registration'} className={style.auth} href="">Зарегистрироваться</Link>
                 <h1 className={style.title}>вход</h1>
                 <div className={style.inputs}>
                     <div className={style.inputsEmail}>

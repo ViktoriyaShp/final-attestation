@@ -42,7 +42,7 @@ function Products() {
                 {
                 product.map((item, index) => {
                     const {url, title, desc, price, weight, id, idx} = item;
-                    return (//key должен передаваться родительскому объекту
+                    return (
                         <Link key = {index} item={item.id} to={`*/${id}`}>
                             <Card 
                                 id = {id}

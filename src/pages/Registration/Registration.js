@@ -31,10 +31,10 @@ function Registration () {
             } else {
                 document.querySelector(`.${style.emailEmpty}`).style.display = 'none'
 
-                if(login.length < 4 && login.length > 0) {
-                    document.querySelector(`.${style.emailValid}`).style.display = 'block'
+                if(login.length < 4) {
+                    // document.querySelector(`.${style.emailValid}`).style.display = 'block'
                 } else {
-                    document.querySelector(`.${style.emailValid}`).style.display = 'none'
+                    // document.querySelector(`.${style.emailValid}`).style.display = 'none'
 
                     if(password === '') {
                         document.querySelector(`.${style.passwordEmpty}`).style.display = 'block'
@@ -59,7 +59,7 @@ function Registration () {
     return(
         <div className={style.container}>
             <form onSubmit={handleRegistrationUser} className={style.registration}>
-                <Link to={'/final-attestation/registration/auth'} className={style.auth} href="">Авторизоваться</Link>
+                <Link to={'*'} className={style.auth} href="">Авторизоваться</Link>
                 <h1 className={style.title}>Регистрация</h1>
                 
                 <div className={style.inputs}>

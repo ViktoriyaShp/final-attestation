@@ -6,7 +6,6 @@
     overflow-x: auto;
 }
 
-
 .basket__header {
     display: flex;
     justify-content: space-between;
@@ -94,5 +93,7 @@ hr {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-    color: #131313
+    color: #131313;
+    cursor: pointer;
 }
+

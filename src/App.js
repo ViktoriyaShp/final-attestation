@@ -4,6 +4,7 @@ import Product from './pages/ProductDescription/Product.js';
 import Registration from './pages/Registration/Registration.js';
 import Authorization from './pages/Authorization/Authorization.js';
 import { Routes, Route} from 'react-router-dom';
+
 import { useSelector } from 'react-redux';
 
 
@@ -17,8 +18,8 @@ function App() {
         {
           authorization === false
             ? <>
-              <Route path='/final-attestation/registration/auth' element={<Authorization/>}/>
-              <Route path='/final-attestation' element={<Registration/>}/>
+              <Route path='*' element={<Authorization/>}/>
+              <Route path='/registration' element={<Registration/>}/>
             </>
             : <>
               <Route path='*' element={<Products/>}/>

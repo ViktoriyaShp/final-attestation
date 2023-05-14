@@ -1,3 +1,4 @@
+import React from 'react';
 import { useDispatch } from 'react-redux';
 import { exit } from '../../store/reducers/users';
 import './button.css';
