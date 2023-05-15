@@ -17,7 +17,7 @@ function Card({id, url, title, desc, price, weight, idx}) {
         title: title,
         price: price,
     }
-
+    //функция добавления товаров в корзину
     const handleAddProduct = (event) => {
         event.preventDefault()
         event.stopPropagation()
@@ -33,7 +33,8 @@ function Card({id, url, title, desc, price, weight, idx}) {
 
         setAddState(prevState => !prevState);
     }
-
+    
+    //функция удаления товаров из корзины
     const handleRemoveProduct = (event) => {
         event.preventDefault()
         event.stopPropagation()

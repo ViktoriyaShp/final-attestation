@@ -1,6 +1,6 @@
 .product {
     height: 100vh;
-    background-image: url('../assets/fone.png');
+    background-image: url('../../assets/fone.png');
     background-size: cover;
     background-color: black;
     font-family: 'Montserrat', sans-serif;

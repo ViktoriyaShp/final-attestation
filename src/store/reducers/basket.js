@@ -20,7 +20,7 @@ const basketSlice = createSlice({
         },
         removeProductBasket(state, action) {
             state.basket = state.basket.filter((item) => {
-                return item.idx !== action.payload //в action.payload мы передаем id который был передан в задиспаченный(отправленный) action в basketCard
+                return item.idx !== action.payload //в action.payload передаем id который был передан в задиспаченный(отправленный) action в basketCard
             } )
             state.pricesProducts = state.basket.reduce((sum, current) => {
                 return sum + parseInt(current.price)

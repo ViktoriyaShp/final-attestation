@@ -1,25 +1,25 @@
 import React from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import ProductCard from '../../components/elements/productCard';
+import ProductCard from '../../components/productCard/productCard';
 import Button from '../../components/button/button.js';
-import style from '../Product.module.css';
+import style from './Product.module.css';
 import { product } from '../../product.js';
 import {useSelector} from 'react-redux';
 import bag from '../../assets/bag.svg'
 import vector from '../../assets/Vector.svg'
 
-
 function Product() {
     const {id} = useParams()
-    const {url, title, desc, price, weight} = product.find(item => item.id === id)/*с помощью UseParams вытаскиваем нужный id и уже ищем его с помощьбю find и проваливаемся в карточку нужного id*/ 
+    const {url, title, desc, price, weight} = product.find(item => item.id === id)//с помощью UseParams вытаскиваем нужный id и уже ищем его с помощью find и проваливаемся в карточку нужного id
 
     const productsSum = useSelector(state => state.basket.pricesProducts)
 
     const productsVolume = useSelector(state => state.basket.count)
 
     const navigate = useNavigate()
-    const back = () => navigate(-1)
+    const back = () => navigate(-1)//функция для возврата на предыдущую страницу
 
+    //функция для склонения слов
     function declOfNum(n, text_forms) {  
         n = Math.abs(n) % 100; 
         const n1 = n % 10;

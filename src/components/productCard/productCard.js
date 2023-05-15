@@ -2,6 +2,7 @@ import React from 'react';
 import style from './productCard.module.css'
 import {useDispatch} from 'react-redux';
 import { addProduct } from '../../store/reducers/basket.js';
+import { v4 as uuidv4 } from 'uuid';
 
 function ProductCard({url, title, desc, price, weight, id}) {
 
@@ -9,13 +10,15 @@ function ProductCard({url, title, desc, price, weight, id}) {
 
     let item = {
         id: id,
+        idx: uuidv4(),
         url: url,
         title: title,
         desc: desc,
         price: price,
         weight: weight,
     }
-
+    
+    //функция добавления товаров в корзину
     const addFromProduct = () => {
         dispatch(addProduct(item))
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Card from '../../components/elements/card';
+import Card from '../../components/card/card';
 import { product } from '../../product';
 import './Products.css';
 import {useSelector} from 'react-redux';
@@ -14,6 +14,7 @@ function Products() {
 
     const productsVolume = useSelector(state => state.basket.count)
 
+    //функция для склонения слов
     function declOfNum(n, text_forms) {  
         n = Math.abs(n) % 100; 
         const n1 = n % 10;

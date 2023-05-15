@@ -5,10 +5,8 @@ const usersSlice = createSlice({
     initialState: {
         users: [],
         authorization: false,
-
     },
     reducers: {
-
         registrationUser(state, action) {
             state.users.push(action.payload);
         },
@@ -18,7 +16,6 @@ const usersSlice = createSlice({
         exit(state) {
             state.authorization = false;
         },
-
     }
 })
 

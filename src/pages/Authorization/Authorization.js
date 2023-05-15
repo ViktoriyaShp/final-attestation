@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useDispatch} from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import style from '../Enter.module.css';
+import style from './Enter.module.css';
 import { enter} from '../../store/reducers/users.js';
 import { useRef } from 'react';
 
@@ -23,7 +23,7 @@ function Authorization () {
     const handleEnterUser = (event) => {
         event.preventDefault()
         event.stopPropagation()
-
+        
         if(login ===  '') {
             document.querySelector(`.${style.emailEmpty}`).style.display = 'block'
         } else {

@@ -9,7 +9,7 @@ function Registration () {
 
     let users = JSON.parse(localStorage.getItem('user') || '[]')
     
-    const dispatch = useDispatch() //dispatch Это функция которая вызывает action
+    const dispatch = useDispatch()
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
 

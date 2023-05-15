@@ -1,7 +1,7 @@
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-import BasketCard from '../../components/elements/basketCards';
-import './basket.css';
+import BasketCard from '../../components/basketCards/basketCards';
+import './Basket.css';
 import {useSelector} from 'react-redux';
 import Button from '../../components/button/button';
 import vector from '../../assets/Vector.svg'
@@ -36,7 +36,7 @@ function Basket() {
                                         price = {price}
                                     />
                             )
-                        })    
+                        })
                     }
                 </div>
             </div>
