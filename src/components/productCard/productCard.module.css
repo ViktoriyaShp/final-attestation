@@ -7,7 +7,6 @@
     width: 500px;
     height: 500px;
     margin: 0 auto;
-
 }
 
 .information {
@@ -38,6 +37,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 280px 0 0;
 }
 
 .left {
@@ -71,5 +71,6 @@
     line-height: 17px;
     color: #131313;
     padding: 13px 63px;
+    cursor: pointer;
 }
 

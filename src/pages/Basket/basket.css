@@ -1,3 +1,12 @@
+hr {
+    background-image: linear-gradient(to right, transparent, rgba(242, 156, 59, 0.737), transparent);
+    border: 0;
+    height: 1px;
+    margin: 22px 0 22px 0;
+    box-sizing:content-box;
+    display: block;
+}
+
 .basket {
     height: 100vh;
     background-color: #161516;
@@ -55,7 +64,6 @@ hr {
 .footer {
     position: sticky;
     bottom: 0;
-    /* border-top: 1px solid #D58C51; */
     background-color: #161516;
 }
 

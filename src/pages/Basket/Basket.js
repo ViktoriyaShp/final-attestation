@@ -40,7 +40,7 @@ function Basket() {
                     }
                 </div>
             </div>
-
+            <hr></hr>
             <footer className="footer">
                 <div className="container-basket">
                     <div className="footer-desc">
