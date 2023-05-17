@@ -11,7 +11,7 @@ function BasketCard({id, url, title, price, idx}) {
     const handleRemoveProductBasket = (e) => {
         e.stopPropagation()
         e.preventDefault()
-        dispatch(removeProductBasket(idx))
+        dispatch(removeProductBasket(idx)) //диспачим(отправляем) action и в него передаем id
         const cart = JSON.parse(localStorage.getItem('cart')) || []; 
         
         const updCart = cart.filter(item => item.id !== id)
