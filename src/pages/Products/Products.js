@@ -14,7 +14,6 @@ function Products() {
 
     const productsVolume = useSelector(state => state.basket.count)
 
-    //функция для склонения слов
     function declOfNum(n, text_forms) {  
         n = Math.abs(n) % 100; 
         const n1 = n % 10;
